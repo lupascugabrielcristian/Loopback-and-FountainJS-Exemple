@@ -1,3 +1,33 @@
-.topic-link{
-    color: red;
+.topics-wrapper {
+    background-color: #1E2533;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    border: 0.15rem solid black;
+    margin: 0 auto;
+}
+
+all-topics{
+    flex: 1;
+}
+
+post-topic{
+    flex: 1;
+}
+
+topic-item {
+    cursor: pointer;
+}
+
+topic-item:hover {
+    color: #f0f069;
+}
+
+.link-section-post {
+    background-color: rgba(252, 252, 252, 0.07);
+    box-shadow: 0px 4px 6px #453838;
+    margin: 1rem;
+    padding: 1rem;
 }
