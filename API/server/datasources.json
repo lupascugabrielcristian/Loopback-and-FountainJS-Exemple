@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "elephant": {
+    "host": "qdjjtnkv.db.elephantsql.com",
+    "port": 5432,
+    "url": "",
+    "database": "kdooptgi",
+    "password": "DuvAnWmXGI5iXBvPS1Eze3EJZmWT_jp5",
+    "name": "elephant",
+    "user": "kdooptgi",
+    "connector": "postgresql"
+  }
+}
