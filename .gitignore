@@ -1,9 +1,9 @@
 API/.tmp/
 API/node_modules/
 API/dist/
+API/npm-debug.log
 
 Client/.tmp/
 Client/coverage/
 Client/dist/
 Client/node_modules/
-
