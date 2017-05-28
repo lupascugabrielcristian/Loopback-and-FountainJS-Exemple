@@ -1,1 +1,7 @@
-Topic {{vm.topic.description}} are {{vm.topic.links.length}} links
+<!--Topic {{vm.topic.description}} are {{vm.topic.links.length}} links-->
+<p>Topic tile: <span class="topic-link">{{vm.topic.description}}</span></p>
+<ul>
+    <li ng-repeat="link in vm.topic.links">
+        Link: {{link}}
+    </li>
+</ul>

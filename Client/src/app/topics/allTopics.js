@@ -9,6 +9,10 @@ function controller(topicsProvider) {
   vm.test = '';
   vm.topics = [];
 
-  vm.topics = topicsProvider.getTopics(10);
+  topicsProvider.getTopics(onGetSuccessful);
   vm.count = vm.topics.length;
+
+  function onGetSuccessful(topics) {
+    vm.topics = topics;
+  }
 }

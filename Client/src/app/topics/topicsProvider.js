@@ -1,25 +1,19 @@
 module.exports = topicsProvider;
 
-function topicsProvider($log) {
+function topicsProvider($log, $http) {
   return {
     getTopics: getTopics
   };
 
-  function getTopics(n) {
-    if (!n) {
-      $log.error('Invalid input. Fac n 1');
-      n = 1;
-    }
-    var topics = [];
-    for (var i = 0; i < n; i++) {
-      topics.push(new Topic());
-    }
-    return topics;
+  function getTopics(onSucess) {
+    return getFromServer(onSucess);
   }
 
-  function Topic() {
-    this.description = 'des';
-    this.links = ['link', 'link'];
+  function getFromServer(onSucessFc) {
+    var serverUrl = 'http://0.0.0.0:3000/api/topics';
+    $http.get(serverUrl).then(function (result) {
+      onSucessFc(result.data);
+    });
   }
 }
 

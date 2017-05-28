@@ -12,6 +12,7 @@ var footer = require('./app/footer');
 var mainTopics = require('./app/topics/main');
 
 require('./index.css');
+require('./topics.css');
 
 angular
   .module('app', [techsModule, topicsModule, 'ui.router'])
