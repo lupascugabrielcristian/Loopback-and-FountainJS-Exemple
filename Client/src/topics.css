@@ -2,19 +2,31 @@
     background-color: #1E2533;
     height: 100%;
     color: #fff;
-    display: flex;
-    flex-direction: row;
     width: 90%;
-    border: 0.15rem solid black;
     margin: 0 auto;
+    padding: 1rem;
 }
 
 all-topics{
-    flex: 1;
+    display: flex;
+    margin-top: 2rem;
+}
+
+.topics-list {
+    flex: 1
+}
+
+.links-list {
+    flex: 4
 }
 
 post-topic{
-    flex: 1;
+    display: flex;
+    width: 40%;
+    max-height: 20rem;
+    border: 0.15rem solid white;
+    margin: 0 auto;
+    padding: 1rem;
 }
 
 topic-item {
@@ -30,4 +42,61 @@ topic-item:hover {
     box-shadow: 0px 4px 6px #453838;
     margin: 1rem;
     padding: 1rem;
+}
+
+.topics-buttons {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 2rem;
+}
+
+.topics-button {
+    flex: 1;
+    color: #b8edc9;
+    background-color: #187780;
+    margin: 0.2rem;
+    cursor: pointer;
+    padding: 0.1rem;
+}
+
+.topics-button:active {
+    background-color: #1abccc;
+}
+
+.open-link {
+    cursor: pointer;
+    color: #415375;
+}
+
+.open-link:hover {
+    color: #40ef8f;
+}
+
+.add-link-div {
+    margin: 0.5rem;
+    border: 2px white;
+    background-color: rgba(132, 140, 195, 0.15);
+    padding: 1rem;
+}
+
+.add-link-input {
+    height: 1.5rem;
+    background: #1b305a;
+    border: none;
+    margin-top: 1rem;
+    color: wheat;
+    font-size: 20px;
+    padding: 0.2rem;
+    padding-left: 0.8rem;
+    width: 95%;
+}
+
+.add-link-button {
+    margin-top: 0.8rem;
+    padding: 0.3rem;
+    background-color: #536487;
+    color: white;
+    width: 4rem;
+    box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.75);
 }
