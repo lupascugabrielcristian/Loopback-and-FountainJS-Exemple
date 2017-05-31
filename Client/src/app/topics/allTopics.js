@@ -4,7 +4,7 @@ module.exports = {
   controllerAs: 'vm'
 };
 
-function controller(topicsProvider, linksProvider, $scope, $log) {
+function controller(topicsProvider, linksProvider, $scope, $log, selectedTopic) {
   var vm = this;
   vm.test = '';
   vm.topics = [];
@@ -25,12 +25,11 @@ function controller(topicsProvider, linksProvider, $scope, $log) {
 
   function selectTopic(topic) {
     linksProvider.getLinks(topic, onLinksObtained, onFail);
+    selectedTopic.set(topic);
   }
 
   function onLinksObtained(links) {
     vm.links = links;
-    $log.log('Obtained links');
-    $log.log(vm.links);
   }
 
   function onFail() {
@@ -39,5 +38,6 @@ function controller(topicsProvider, linksProvider, $scope, $log) {
 
   function startListening() {
     $scope.$on('updateTopics', updateTopics);
+    vm.links = [];
   }
 }
