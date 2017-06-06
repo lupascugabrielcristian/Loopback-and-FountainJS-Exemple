@@ -17,7 +17,8 @@ all-topics{
 }
 
 .links-list {
-    flex: 4
+    flex: 4;
+    padding-left: 1rem;
 }
 
 post-topic{
@@ -66,7 +67,6 @@ topic-item:hover {
 
 .open-link {
     cursor: pointer;
-    color: #415375;
 }
 
 .open-link:hover {
@@ -99,4 +99,23 @@ topic-item:hover {
     color: white;
     width: 4rem;
     box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.75);
+}
+
+.topic {
+    padding: 0.7rem;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.75);
+    background: #2d384e;
+    margin-bottom: 0.7rem;
+    cursor: pointer;
+    min-height: 3rem;
+}
+
+.topic:hover{
+    background: #3c507a;
+}
+
+.topic-options {
+    margin: 0.3rem;
+    margin-top:1rem;
 }

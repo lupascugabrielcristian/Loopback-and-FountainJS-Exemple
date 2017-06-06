@@ -7,6 +7,7 @@ var postTopic = require('./postTopic');
 var addLink = require('./addLink');
 var linksProvider = require('./linksProvider');
 var selectedTopic = require('./selectedTopic');
+var topic = require('./topic');
 
 var topicsModule = 'topicsModule';
 
@@ -18,6 +19,7 @@ angular
   .component('allTopics', allTopics)
   .component('postTopic', postTopic)
   .directive('addLink', addLink)
+  .directive('topic', topic)
   .factory('topicsProvider', topicsProvider)
   .factory('linksProvider', linksProvider)
   .factory('selectedTopic', selectedTopic);

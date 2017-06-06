@@ -23,6 +23,10 @@ function controller(topicsProvider, linksProvider, $scope, $log, selectedTopic) 
     topicsProvider.getTopics(onGetSuccessful);
   }
 
+  function updateLinks(links) {
+    vm.links = links;
+  }
+
   function selectTopic(topic) {
     linksProvider.getLinks(topic, onLinksObtained, onFail);
     selectedTopic.set(topic);
@@ -37,7 +41,10 @@ function controller(topicsProvider, linksProvider, $scope, $log, selectedTopic) 
   }
 
   function startListening() {
-    $scope.$on('updateTopics', updateTopics);
     vm.links = [];
+    $scope.$on('updateTopics', updateTopics);
+    $scope.$on('updateLinks', function (event, args) {
+      updateLinks(args);
+    });
   }
 }
