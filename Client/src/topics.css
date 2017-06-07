@@ -73,11 +73,8 @@ topic-item:hover {
     color: #40ef8f;
 }
 
-.add-link-div {
-    margin: 0.5rem;
-    border: 2px white;
-    background-color: rgba(132, 140, 195, 0.15);
-    padding: 1rem;
+.link{
+    font-size: larger;
 }
 
 .add-link-input {
@@ -118,4 +115,35 @@ topic-item:hover {
 .topic-options {
     margin: 0.3rem;
     margin-top:1rem;
+}
+
+.topic-option {
+    background: rgba(103, 70, 236, 0.72);
+    border: none;
+    color: white;
+    padding: 0.3rem;
+}
+
+.topic-option:active{
+    background: rgba(123, 94, 241, 0.9);
+}
+
+.add-link-parent {
+    display: flex;
+    color: #fff;
+    align-items: center;
+    height: 100%;
+    background-color: #1E2533;
+}
+
+.add-link-div {
+    margin: 5%;
+    border: 2px white;
+    background-color: rgba(132, 140, 195, 0.15);
+    padding: 1rem;
+    flex: 1;
+}
+
+.topic-name {
+    color: #90ecfb;
 }
