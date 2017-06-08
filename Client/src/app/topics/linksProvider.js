@@ -7,7 +7,7 @@ function linksProvider($log, $http) {
 
   function getLinks(forTopic, onSucess, onFail) {
     // var serverUrl = 'http://127.0.0.1:3000/api/links/{topicId}';
-    var serverUrl = 'http://0.0.0.0:3000/api/links?filter=%7B%22topicId%22%3A%20{topicId}%7D';
+    var serverUrl = 'http://127.0.0.1:3000/api/topics/{topicId}/links';
     serverUrl = serverUrl.replace('{topicId}', forTopic.id);
     $http.get(serverUrl).then(function (result) {
       $log.log('Links aquired');
