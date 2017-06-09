@@ -1,5 +1,5 @@
 .topics-wrapper {
-    background-color: #1E2533;
+    background-color: #424357;
     height: 100%;
     color: #fff;
     width: 90%;
@@ -19,6 +19,13 @@ all-topics{
 .links-list {
     flex: 4;
     padding-left: 1rem;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #47566D;
+}
+
+.links-list a {
+    color: #bed3f5;
 }
 
 post-topic{
@@ -70,7 +77,7 @@ topic-item:hover {
 }
 
 .open-link:hover {
-    color: #40ef8f;
+    color: #7BFFDE;
 }
 
 .link{
@@ -100,16 +107,18 @@ topic-item:hover {
 
 .topic {
     padding: 0.7rem;
-    border-radius: 10px 10px 10px 10px;
-    box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.75);
-    background: #2d384e;
+    /*border-radius: 10px 10px 10px 10px;
+    box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.75);*/
+    background: #252637;
     margin-bottom: 0.7rem;
     cursor: pointer;
     min-height: 3rem;
+    color: #B7B7CE;
 }
 
 .topic:hover{
-    background: #3c507a;
+    background: #1A1A35;
+    color: #ADAFF2;
 }
 
 .topic-options {
@@ -118,16 +127,20 @@ topic-item:hover {
 }
 
 .topic-option {
-    background: rgba(103, 70, 236, 0.72);
+    /*background: rgba(103, 70, 236, 0.72);*/
+    background: none;
     border: none;
-    color: white;
+    color: #B7B7CE;
     padding: 0.3rem;
+}
+
+.topic-option:hover{
+    color: #7BFFDE;
 }
 
 .topic-option:active{
     background: rgba(123, 94, 241, 0.9);
 }
-
 .add-link-parent {
     display: flex;
     color: #fff;
