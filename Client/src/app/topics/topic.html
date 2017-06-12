@@ -1,7 +1,7 @@
 <div class="topic" ng-click="vm.selectTopic()" ng-mouseover="vm.hoverIn()" ng-mouseleave="vm.hoverOut()">
     {{vm.topic.description}}
     <div class="topic-options" ng-show="vm.displayButtons">
-        <button class="topic-option">Remove</button>
+        <button class="topic-option" ng-click="vm.removeTopic(vm.topic); $event.stopPropagation();">Remove</button>
         <button class="topic-option" ui-sref='addLink({topic: vm.topic})'>Add link</button>
         <button class="topic-option">Rename</button>
     </div>

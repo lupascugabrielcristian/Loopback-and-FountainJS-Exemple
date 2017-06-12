@@ -8,7 +8,7 @@ function addLink() {
     scope: {
       topic: '='
     },
-    controller: ['$scope', '$rootScope', '$log', 'linksProvider', 'selectedTopic', controller],
+    controller: ['$scope', '$rootScope', '$log', 'linksProvider', 'selectedTopic', 'topicsOperations', '$timeout', controller],
     controllerAs: 'vm'
   };
 
@@ -16,10 +16,11 @@ function addLink() {
 
   }
 
-  function controller($scope, $rootScope, $log, linksProvider, selectedTopic) {
+  function controller($scope, $rootScope, $log, linksProvider, selectedTopic, topicsOperations, $timeout) {
     var vm = this;
     vm.topic = $scope.topic;
     vm.selectTopic = selectTopic;
+    vm.removeTopic = removeTopic;
     vm.hoverIn = hoverIn;
     vm.hoverOut = hoverOut;
     vm.displayButtons = false;
@@ -35,6 +36,14 @@ function addLink() {
     function selectTopic() {
       linksProvider.getLinks(vm.topic, onLinksObtained, onFail);
       selectedTopic.set(vm.topic);
+    }
+
+    function removeTopic(topic) {
+      topicsOperations.remove(topic);
+      $timeout(function () {
+        $rootScope.$broadcast('updateTopics');
+        $rootScope.$broadcast('updateLinks', []);
+      }, 10);
     }
 
     function onLinksObtained(links) {

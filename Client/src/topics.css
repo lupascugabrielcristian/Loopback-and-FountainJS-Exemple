@@ -7,6 +7,51 @@
     padding: 1rem;
 }
 
+.main-parent {
+    background-color: #424357;
+    height: 100%;
+    color: #fff;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.main-div {
+    margin: 5%;
+    border: 2px white;
+    background-color: rgba(132, 140, 195, 0.15);
+    padding: 1rem;
+    flex: 1;
+}
+
+.main-div label {
+    font-family: 'Mogra', cursive;
+    font-size: 18px;
+}
+
+.topic-input {
+    height: 1.5rem;
+    background: #1b305a;
+    border: none;
+    margin-top: 1rem;
+    color: wheat;
+    font-size: 20px;
+    padding: 0.2rem;
+    padding-left: 0.8rem;
+    width: 95%;
+    font-family: 'Mogra', cursive;
+    font-size: 22px;
+}
+
+.topic-button {
+    margin-top: 0.8rem;
+    padding: 0.3rem;
+    background-color: #536487;
+    color: white;
+    width: 4rem;
+    box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.75);
+}
+
 all-topics{
     display: flex;
     margin-top: 2rem;

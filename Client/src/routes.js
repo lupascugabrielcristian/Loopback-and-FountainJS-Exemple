@@ -18,5 +18,9 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       url: '/allLink',
       component: 'addLink',
       params: {topic: null}
+    })
+    .state('addTopic', {
+      url: '/addTopic',
+      component: 'addTopic'
     });
 }

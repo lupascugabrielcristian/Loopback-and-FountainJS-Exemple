@@ -11,6 +11,7 @@ var title = require('./app/title');
 var footer = require('./app/footer');
 var mainTopics = require('./app/topics/main');
 var addLink = require('./app/topics/addLink');
+var addTopic = require('./app/topics/addTopic');
 
 require('./index.css');
 require('./topics.css');
@@ -23,4 +24,5 @@ angular
   .component('fountainTitle', title)
   .component('fountainFooter', footer)
   .component('topics', mainTopics)
-  .component('addLink', addLink);
+  .component('addLink', addLink)
+  .component('addTopic', addTopic);

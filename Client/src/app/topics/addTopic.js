@@ -1,10 +1,10 @@
 module.exports = {
-  template: require('./postTopic.html'),
+  template: require('./addTopic.html'),
   controller: controller,
   controllerAs: 'vm'
 };
 
-function controller($log, $http, $rootScope) {
+function controller($log, $http, $rootScope, $state) {
   var vm = this;
   vm.topicDescription = null;
   vm.post = postTopic;
@@ -20,6 +20,7 @@ function controller($log, $http, $rootScope) {
     $http.post(postUrl, request).then(function (result) {
       $log.log(result);
       $rootScope.$broadcast('updateTopics');
+      $state.go('topics');
     });
   }
 }

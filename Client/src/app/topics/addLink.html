@@ -1,8 +1,8 @@
 
-	<div class="add-link-parent">
-		<div class="add-link-div">
+	<div class="main-parent">
+		<div class="main-div">
 			<label for="link">Add link for topic <span class="topic-name">{{vm.topic.description}}</span></label><br>
-			<input class="add-link-input" id="link" type="text" ng-model="vm.url" placeholder="Insert a url" ng-change="vm.onUrlChanged()"><br>
-			<button ng-show="vm.topic" class="add-link-button" ng-click="vm.postLink()">Post</button><br>
+			<input class="topic-input" id="link" type="text" ng-model="vm.url" placeholder="Insert a url" ng-change="vm.onUrlChanged()"><br>
+			<button ng-show="vm.topic" class="topic-button" ng-click="vm.postLink()">Post</button><br>
 		</div>
 	</div>
