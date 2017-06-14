@@ -7,7 +7,7 @@
 <div class="links-list">
 	<div ng-repeat="l in vm.links as link">
 		<a  class="link open-link" href="{{l.url}}" target="_blank">
-			{{l.url}} <span ng-repeat="t in link.tags as t">{{t}}</span>
+			{{l.url}} <span class="tag" ng-repeat="t in l.tags as t">{{t}} </span>
 		</a>
 	</div>
 </div>

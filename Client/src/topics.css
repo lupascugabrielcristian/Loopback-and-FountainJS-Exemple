@@ -1,5 +1,5 @@
 .topics-wrapper {
-    background-color: #424357;
+    background-color: #7d7e9a;
     height: 100%;
     color: #fff;
     width: 90%;
@@ -26,7 +26,7 @@
 
 .main-div label {
     font-family: 'Mogra', cursive;
-    font-size: 18px;
+    font-size: 17px;
 }
 
 .topic-input {
@@ -40,7 +40,7 @@
     padding-left: 0.8rem;
     width: 95%;
     font-family: 'Mogra', cursive;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .topic-button {
@@ -204,4 +204,9 @@ topic-item:hover {
 
 .topic-name {
     color: #90ecfb;
+}
+
+.tag {
+    color: #929ba8;
+    font-size: smaller;
 }

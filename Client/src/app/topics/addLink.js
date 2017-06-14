@@ -8,6 +8,7 @@ function controller($log, $stateParams, $http, $state, $scope) {
   var vm = this;
   vm.topic = $stateParams.topic;
   vm.postLink = postLink;
+  vm.tags = null;
 
   function postLink() {
     if (!vm.url) {
@@ -21,8 +22,28 @@ function controller($log, $stateParams, $http, $state, $scope) {
     };
     $http.post(postUrl, request).then(function (result) {
       $log.log(result);
-      $scope.$broadcast('updateTopics');
+      var linkId = result.data.id;
+      addTags(linkId);
+    });
+  }
+
+  function addTags(linkId) {
+    if (!vm.tags || vm.tags.length === 0) {
+      return;
+    }
+
+    var tags = vm.tags.split(' ');
+    var addTagsUrl = 'http://0.0.0.0:3000/api/links/{linkId}';
+    addTagsUrl = addTagsUrl.replace('{linkId}', linkId);
+
+    var requestBody = {
+      tags: tags
+    };
+    $http.patch(addTagsUrl, requestBody).then(function (result) {
+      $log.log('add tags result: ');
+      $log.log(result);
       $state.go('topics');
+      $scope.$broadcast('updateTopics');
     });
   }
 }
