@@ -2,8 +2,6 @@ API/.tmp/
 API/node_modules/
 API/dist/
 API/npm-debug.log
-API/server/datasources.json
-API/server/model-config.json
 
 Client/.tmp/
 Client/coverage/
