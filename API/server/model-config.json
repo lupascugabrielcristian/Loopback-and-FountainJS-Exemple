@@ -36,11 +36,11 @@
     "public": false
   },
   "Topic": {
-    "dataSource": "elephant",
+    "dataSource": "db",
     "public": true
   },
   "Link": {
-    "dataSource": "elephant",
+    "dataSource": "db",
     "public": true
   }
 }

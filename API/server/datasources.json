@@ -7,10 +7,10 @@
     "host": "qdjjtnkv.db.elephantsql.com",
     "port": 5432,
     "url": "",
-    "database": "kdooptgi",
-    "password": "DuvAnWmXGI5iXBvPS1Eze3EJZmWT_jp5",
+    "database": "",
+    "password": "",
     "name": "elephant",
-    "user": "kdooptgi",
+    "user": "",
     "connector": "postgresql"
   }
 }
