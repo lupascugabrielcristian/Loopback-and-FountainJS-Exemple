@@ -29,6 +29,7 @@ function controller($log, $stateParams, $http, $state, $scope) {
 
   function addTags(linkId) {
     if (!vm.tags || vm.tags.length === 0) {
+      $state.go('topics');
       return;
     }
 

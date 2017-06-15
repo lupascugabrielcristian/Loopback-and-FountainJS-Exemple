@@ -1,13 +1,17 @@
-<div class="topics-list"> 
+<div class="topics-list" ng-show="vm.topics.length > 0"> 
 	<div ng-repeat="item in vm.topics">
 	    <!--<topic-item topic='item' ng-click="vm.selectTopic(item)"></topic-item>-->
 		<topic topic="item"></topic>
 	</div>
 </div>
-<div class="links-list">
+<div class="links-list" ng-show="vm.topics.length > 0">
 	<div ng-repeat="l in vm.links as link">
 		<a  class="link open-link" href="{{l.url}}" target="_blank">
 			{{l.url}} <span class="tag" ng-repeat="t in l.tags as t">{{t}} </span>
 		</a>
 	</div>
+</div>
+
+<div class="message" ng-show="!vm.topics || vm.topics.length == 0">
+	We have not topics yet. Add some ....
 </div>

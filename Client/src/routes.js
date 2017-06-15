@@ -22,5 +22,10 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     .state('addTopic', {
       url: '/addTopic',
       component: 'addTopic'
+    })
+    .state('removeLink', {
+      url: '/removeLink',
+      component: 'removeLink',
+      params: {topic: null}
     });
 }

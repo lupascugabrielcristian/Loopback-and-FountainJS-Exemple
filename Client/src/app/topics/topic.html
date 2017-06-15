@@ -4,5 +4,6 @@
         <button class="topic-option" ng-click="vm.removeTopic(vm.topic); $event.stopPropagation();">Remove</button>
         <button class="topic-option" ui-sref='addLink({topic: vm.topic})'>Add link</button>
         <button class="topic-option">Rename</button>
+        <button class="topic-option" ui-sref="removeLink({topic: vm.topic})">Remove link</button>
     </div>
 </div>
